@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Hello from './components/Hello.js'
 import Message from './components/Message.js'
+import Welcome from './components/Welcome.js'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Hello/>
       <Hello/>
       <Message/>
+      <Welcome name="Feras"/>
     </div>
   );
 }
