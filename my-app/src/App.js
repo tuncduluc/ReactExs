@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Hello from './components/Hello.js'
+import Message from './components/Message.js'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Hello/>
       <Hello/>
       <Hello/>
+      <Message/>
     </div>
   );
 }
