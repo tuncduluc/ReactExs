@@ -12,7 +12,7 @@ function App() {
       <Hello/>
       <Hello/>
       <Message/>
-      <Welcome name={<strong>Feras</strong>} age={74}/>
+      <Welcome name="John" age={33}/>
     </div>
   );
 }
