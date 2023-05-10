@@ -4,16 +4,18 @@ class Counter extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        count: 0
+        count: props.initialValue || 0
       };
     }
 
     componentDidMount() {
+        const {incAmount, incInterval} = this.props;
         this.interval = setInterval(() => {
           this.setState(prevState => ({
-            count: prevState.count + 1
+            count: prevState.count + incAmount
           }));
-        }, 1000);
+          
+        }, incInterval);
       }
 
       componentWillUnmount() {
