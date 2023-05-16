@@ -1,4 +1,4 @@
-import React, {dwqdqwdwqdwqdqwdwq} from 'react';
+import React from 'react';
 
 class ClickCounter extends React.Component {
     state = {
