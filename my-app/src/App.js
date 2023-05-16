@@ -14,7 +14,7 @@ function App() {
       <Hello/>
       <Message/>
       <Welcome name="John" age={15}/>
-      <Counter initialValue={0} incInterval={1000} incAmount={1} />
+      <Counter initialValue={0} incInterval={599} incAmount={1} />
 
     </div>
   );
