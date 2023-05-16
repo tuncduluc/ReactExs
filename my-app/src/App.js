@@ -6,7 +6,12 @@ import Message from './components/Message.js'
 import Welcome from './components/Welcome.js'
 import ClickTracker from './components/ClickTracker';
 import InteractiveWelcome from './components/InteractiveWelcome';
+import Login from './components/Login';
 function App() {
+  
+  const handleLogin = (credentials) => {
+    console.log('Logging in with:', credentials);
+  }
   return (
     <div className="App">
      
@@ -20,6 +25,7 @@ function App() {
       <ClickCounter/>
       <ClickTracker/>
       <InteractiveWelcome/>
+      <Login onLogin={handleLogin}/>
     </div>
   );
 }
