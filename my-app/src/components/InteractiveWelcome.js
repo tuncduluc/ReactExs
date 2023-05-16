@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Welcome from "./Welcome";
-import Login from "./Login";
+import UncontrolledLogin from "./UncontrolledLogin";
 
 
 class InteractiveWelcome extends Component {
@@ -31,7 +31,7 @@ class InteractiveWelcome extends Component {
                     value={this.state.name}
                     onChange={this.inputChange}/>
                 <Welcome name={this.state.name} />
-                <Login onLogin={this.handleLogin} onReset={this.handleReset}/>
+                <UncontrolledLogin onLogin={this.handleLogin} onReset={this.handleReset}/>
             </div>
         )
     }

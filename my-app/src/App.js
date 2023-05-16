@@ -7,6 +7,7 @@ import Welcome from './components/Welcome.js'
 import ClickTracker from './components/ClickTracker';
 import InteractiveWelcome from './components/InteractiveWelcome';
 import Login from './components/Login';
+import UncontrolledLogin from './components/UncontrolledLogin';
 function App() {
   
   
@@ -17,9 +18,7 @@ function App() {
   return (
     <div className="App">
      
-      <Hello/>
-      <Hello/>
-      <Hello/>
+    
       <Hello/>
       <Message/>
       
@@ -27,7 +26,7 @@ function App() {
       <ClickCounter/>
       <ClickTracker/>
       <InteractiveWelcome onReset={handleReset}/>
-      
+     
     </div>
   );
 }
