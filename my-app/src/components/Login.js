@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 
-function Login({ onLogin }) {
+function Login({ onLogin, onReset}) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+
 
     const handleLogin = () => {
         onLogin({ username, password });
     }
+
+    const handleReset = () => {
+        setUsername('');
+        setPassword('');
+        onReset()
+      
+    };
 
     const disabled = !username || !password;
     return (
@@ -24,6 +32,7 @@ function Login({ onLogin }) {
             onChange= {event => setPassword(event.target.value)}/>
 
             <button onClick={handleLogin} disabled={disabled}>Login</button>
+            <button onClick={handleReset} disabled={!username && !password}>reset</button>
         </div>
     )
 }

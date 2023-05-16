@@ -9,8 +9,10 @@ import InteractiveWelcome from './components/InteractiveWelcome';
 import Login from './components/Login';
 function App() {
   
-  const handleLogin = (credentials) => {
-    console.log('Logging in with:', credentials);
+  
+      
+  const handleReset = (name) => { 
+    console.log('Clearing input...');
   }
   return (
     <div className="App">
@@ -24,8 +26,8 @@ function App() {
       <Counter initialValue={0} incInterval={599} incAmount={1} />
       <ClickCounter/>
       <ClickTracker/>
-      <InteractiveWelcome/>
-      <Login onLogin={handleLogin}/>
+      <InteractiveWelcome onReset={handleReset}/>
+      
     </div>
   );
 }
