@@ -8,6 +8,7 @@ import ClickTracker from './components/ClickTracker';
 import InteractiveWelcome from './components/InteractiveWelcome';
 import Login from './components/Login';
 import UncontrolledLogin from './components/UncontrolledLogin';
+import TodoList from './components/TodoList';
 function App() {
   
   
@@ -26,7 +27,7 @@ function App() {
       <ClickCounter/>
       <ClickTracker/>
       <InteractiveWelcome onReset={handleReset}/>
-     
+      <TodoList/>
     </div>
   );
 }
