@@ -1,28 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-class ClickCounter extends React.Component {
-    state = {
-        count: 0
-    }
+function ClickCounter() {
+  const [count, setCount] = useState(0);
 
+  const incButtonClick = () => {
+    setCount(prevCount => prevCount + 1);
+  };
 
-incButtonClick = () => {
-    this.setState(prevState => ({
-            count: prevState.count + 1
-    }));
-}
-
-render() {    
-    return (
-        <div>
-            <div>
-                Counter: {this.state.count}
-            </div>
-            <button onClick={this.incButtonClick}> Click here </button>
-            </div>
-        
-    )
-}
+  return (
+    <div>
+      <div>Counter: {count}</div>
+      <button onClick={incButtonClick}>Click here</button>
+    </div>
+  );
 }
 
 export default ClickCounter;
