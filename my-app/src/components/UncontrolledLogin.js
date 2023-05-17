@@ -1,8 +1,12 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 function UncontrolledLogin({ onLogin, onReset }) {
     const usernameRef = useRef(null);
     const passwordRef = useRef(null);
+
+    useEffect(() => {
+        usernameRef.current.focus();
+    }, []);
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -17,6 +21,7 @@ function UncontrolledLogin({ onLogin, onReset }) {
         event.preventDefault();
         usernameRef.current.value = '';
         passwordRef.current.value = '';
+        usernameRef.current.focus();
         onReset();
         };
     
@@ -24,8 +29,16 @@ function UncontrolledLogin({ onLogin, onReset }) {
     return (
         <div>
             <form onSubmit={handleLogin}>
-                <input type="text" ref={usernameRef} placeholder="Username" />
-                <input type="password" ref={passwordRef} placeholder="Password" />
+                <input
+                    type="text"
+                    ref={usernameRef}
+                    placeholder="Username"
+                />
+                <input 
+                    type="password"
+                    ref={passwordRef}
+                    placeholder="Password"
+                    />
                 <button type="submit">Login</button>
                     
 
