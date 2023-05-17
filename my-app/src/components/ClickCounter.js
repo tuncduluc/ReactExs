@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-function ClickCounter() {
+function ClickCounter({ onCounterChange }) {
   const [count, setCount] = useState(0);
 
   const incButtonClick = () => {
     setCount(prevCount => prevCount + 1);
   };
+
+  useEffect(() => {
+    if(typeof onCounterChange === 'function') {
+    onCounterChange(count);
+    }
+  }, [count, onCounterChange]);
+
 
   return (
     <div>
