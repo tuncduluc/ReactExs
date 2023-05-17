@@ -30,7 +30,7 @@ class InteractiveWelcome extends Component {
                     type="text"
                     value={this.state.name}
                     onChange={this.inputChange}/>
-                <Welcome name={this.state.name} />
+                <Welcome name={this.state.name} age={this.state.age} />
                 <UncontrolledLogin onLogin={this.handleLogin} onReset={this.handleReset}/>
             </div>
         )

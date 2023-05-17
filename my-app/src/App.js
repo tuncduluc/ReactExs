@@ -11,6 +11,7 @@ import UncontrolledLogin from './components/UncontrolledLogin';
 import TodoList from './components/TodoList';
 import { LanguageProvider } from './components/LanguageContext';
 import DisplayLanguage from './components/DisplayLanguage';
+import GithubUser from './components/GitHubUser';
 function App() {
   
   
@@ -30,6 +31,7 @@ function App() {
       <ClickTracker/>
       <InteractiveWelcome onReset={handleReset}/>
       <TodoList/>
+      <GithubUser username="fjobeir"/>
       <LanguageProvider>
       <div>
         Language Selector

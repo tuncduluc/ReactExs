@@ -17,7 +17,7 @@ class ClickTracker extends Component {
     render () {
         return (
             <div>
-                <h1>updated button: {this.state.updatedButton}</h1>
+                <h1>last button: {this.state.updatedButton}</h1>
                 <button onClick={this.handleClick}>Button1</button>
                 <button onClick={this.handleClick}>Button2</button>
                 <button onClick={this.handleClick}>Button3</button>

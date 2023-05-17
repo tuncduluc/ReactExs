@@ -8,7 +8,7 @@ class Age extends React.Component {
 }
 
 Age.defaultProps = {   
-    age: ""
+    age: "4"
   }
   
 export default Age

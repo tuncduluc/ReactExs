@@ -19,7 +19,7 @@ class Welcome extends React.Component {
 
 Welcome.defaultProps = {   //So it does not change the message. Cuz I defined the name as "Feras" in App.js.
     name: 'Default',
-    age: '22'
+    age: '33'
     
   }
     
