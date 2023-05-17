@@ -9,6 +9,8 @@ import InteractiveWelcome from './components/InteractiveWelcome';
 import Login from './components/Login';
 import UncontrolledLogin from './components/UncontrolledLogin';
 import TodoList from './components/TodoList';
+import { LanguageProvider } from './components/LanguageContext';
+import DisplayLanguage from './components/DisplayLanguage';
 function App() {
   
   
@@ -28,6 +30,12 @@ function App() {
       <ClickTracker/>
       <InteractiveWelcome onReset={handleReset}/>
       <TodoList/>
+      <LanguageProvider>
+      <div>
+        Language Selector
+        <DisplayLanguage />
+      </div>
+    </LanguageProvider>
     </div>
   );
 }
