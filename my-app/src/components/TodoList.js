@@ -6,7 +6,8 @@ const TodoList = ({ render }) => {
 
   const handleAddItem = () => {
     if (inputValue.trim() !== '') {
-      setItems([...items, inputValue]);
+      const newItem = inputValue.trim();
+      setItems([...items, newItem]);
       setInputValue('');
     }
   };
@@ -16,8 +17,25 @@ const TodoList = ({ render }) => {
     setItems(updatedItems);
   };
 
+  const handleReset = () => {
+    setItems([]);
+  }
+
+  
   return (
     <div>
+        <ul>
+            {items.map((item, index) => (
+                <li key={index}>
+                {item}
+                    <button 
+                        onClick={() => handleRemove(index)}>
+                        Remove
+                    </button>
+                </li>
+        ))}
+        </ul>
+
       {typeof render === 'function' && render(items, handleRemove)}
       <input
         type="text"
@@ -25,6 +43,7 @@ const TodoList = ({ render }) => {
         onChange={(e) => setInputValue(e.target.value)}
       />
       <button onClick={handleAddItem}>Add</button>
+      <button onClick={handleReset}>Reset</button>
     </div>
   );
 };
