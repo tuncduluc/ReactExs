@@ -12,6 +12,7 @@ import TodoList from './components/TodoList';
 import { LanguageProvider } from './components/LanguageContext';
 import DisplayLanguage from './components/DisplayLanguage';
 import GithubUser from './components/GitHubUser';
+import GitHubUserList from './components/GitHubUserList';
 function App() {
   
   
@@ -21,17 +22,15 @@ function App() {
   }
   return (
     <div className="App">
-     
-    
       <Hello/>
-      <Message/>
-      
+      <Message/>  
       <Counter initialValue={0} incInterval={599} incAmount={1} />
       <ClickCounter/>
       <ClickTracker/>
       <InteractiveWelcome onReset={handleReset}/>
       <TodoList/>
       <GithubUser username="fjobeir"/>
+      <GitHubUserList/>
       <LanguageProvider>
       <div>
         Language Selector
