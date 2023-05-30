@@ -25,7 +25,7 @@ function App() {
       <Hello/>
       <Message/>  
       <Counter initialValue={0} incInterval={599} incAmount={1} />
-      <ClickCounter/>
+      <ClickCounter initialValue={44} interval={5}/>
       <ClickTracker/>
       <InteractiveWelcome onReset={handleReset}/>
       <TodoList/>

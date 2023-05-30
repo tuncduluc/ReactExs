@@ -1,25 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useCounter from './HookCounter';
 
-function ClickCounter({ onCounterChange }) {
-  const [count, setCount] = useState(0);
-
-  const incButtonClick = () => {
-    setCount(prevCount => prevCount + 1);
-  };
-
-  useEffect(() => {
-    if(typeof onCounterChange === 'function') {
-    onCounterChange(count);
-    }
-  }, [count, onCounterChange]);
-
+const ClickCounter = () => {
+  const { counter, onInc, onDec, onReset, } = useCounter({ initialValue: 0, interval: 2});
 
   return (
     <div>
-      <div>Counter: {count}</div>
-      <button onClick={incButtonClick}>Click here</button>
+      <p>Count: {counter}</p>
+      <button onClick={onInc}>Increment</button>
+      <button onClick={onDec}>Decrement</button>
+      <button onClick={onReset}>Reset</button>
     </div>
-  );
+  )
 }
 
 export default ClickCounter;
